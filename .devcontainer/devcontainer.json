@@ -1,0 +1,13 @@
+{
+    "name": "Jekyll",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "..",
+        "args": {
+            "VARIANT": "3.1"
+        }
+    },
+    // "remoteUser": "vscode",
+    "forwardPorts": [4000],
+    "postCreateCommand": "gem install jekyll bundler && bundle install"
+}
